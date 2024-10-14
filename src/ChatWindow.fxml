@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml">
+   <left>
+      <BorderPane BorderPane.alignment="CENTER">
+         <center>
+            <ScrollPane fx:id="scrollUsersPane" fitToHeight="true" fitToWidth="true">
+               <content>
+                  <VBox fx:id="usersPanel" prefHeight="349.0" prefWidth="123.0" minWidth="50" />
+               </content>
+            </ScrollPane>
+         </center>
+         <bottom>
+            <VBox prefHeight="139.0" prefWidth="123.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="gName" text="Group Name:" />
+                  <TextField fx:id="gNameText" prefHeight="11.0" prefWidth="123.0" />
+                  <Label fx:id="gMembers" text="Group Members:" />
+                  <TextField fx:id="gMembersText" prefHeight="54.0" prefWidth="123.0" />
+                  <Button fx:id="gCreate" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" text="CREATE GROUP" textAlignment="CENTER" />
+               </children>
+            </VBox>
+         </bottom>
+      </BorderPane>
+   </left>
+   <top>
+      <BorderPane prefHeight="0.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <right>
+            <Button fx:id="SignOut" mnemonicParsing="false" text="Sign out" BorderPane.alignment="CENTER" />
+         </right>
+         <center>
+            <BorderPane BorderPane.alignment="CENTER">
+               <left>
+                  <Label fx:id="receiverName" prefHeight="18.0" prefWidth="207.0" BorderPane.alignment="CENTER" />
+               </left>
+               <right>
+                  <Label fx:id="userName" prefHeight="18.0" prefWidth="211.0" BorderPane.alignment="CENTER" />
+               </right>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <content>
+                  <VBox fx:id="messagePane" />
+              </content>
+            </ScrollPane>
+         </center>
+         <bottom>
+            <BorderPane prefHeight="34.0" prefWidth="477.0" BorderPane.alignment="CENTER">
+               <right>
+                  <HBox prefHeight="34.0" prefWidth="114.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="sendBtn" mnemonicParsing="false" prefHeight="38.0" prefWidth="37.0" text="-&gt;" />
+                        <Button fx:id="fileChoose" mnemonicParsing="false" prefHeight="38.0" prefWidth="37.0" text="+" />
+                        <Button fx:id="emojiBtn" mnemonicParsing="false" prefHeight="37.0" prefWidth="36.0" text=":)" />
+                     </children>
+                  </HBox>
+               </right>
+               <center>
+                  <TextField fx:id="txtInput" prefWidth="299.0" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+         </bottom>
+      </BorderPane>
+   </center>
+</BorderPane>
